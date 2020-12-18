@@ -91,6 +91,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                   snapshot.data.docs[index].data()['description'],
                                   style: TextStyle(fontSize: 13),
                                 ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  snapshot.data.docs[index].data()['time'],
+                                  style: TextStyle(fontSize: 13),
+                                ),
                               ],
                             ),
                           ),
