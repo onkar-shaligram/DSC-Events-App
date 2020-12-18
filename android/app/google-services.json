@@ -7,6 +7,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:261941520217:android:be3807f20b43d809af4e48",
+        "android_client_info": {
+          "package_name": "com.example.dsc_events_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261941520217-h8bvs7seou04anso3pfnsj1seoup41b4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQj0SN_EX6XAo1iVbQYpSzjIKwnOlh6TE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261941520217-h8bvs7seou04anso3pfnsj1seoup41b4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:261941520217:android:1e6f0e2a5fdd683eaf4e48",
         "android_client_info": {
           "package_name": "com.example.dsc_events_app"

@@ -9,7 +9,6 @@ void main() async {
   runApp(MyApp());
 }
 
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -44,14 +43,16 @@ class _MyHomePageState extends State<MyHomePage> {
             return ListView.builder(
                 itemCount: snapshot.hasData ? snapshot.data.docs.length : 0,
                 itemBuilder: (_, index) {
-                  return GestureDetector(
-                    onTap: () async{
-                        var url = snapshot.data.docs[index].data()['urlToEvent'].toString();
-                        if (await canLaunch(url)) {
-                          await launch(url);
-                        } else {
-                          throw 'Could not launch $url';
-                        }
+                  return InkWell(
+                    onTap: () async {
+                      var url = snapshot.data.docs[index]
+                          .data()['urlToEvent']
+                          .toString();
+                      if (await canLaunch(url)) {
+                        await launch(url);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -70,7 +71,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(8),
                                     child: Image.network(
-                                      snapshot.data.docs[index].data()['imageUrl'].toString(),
+                                      snapshot.data.docs[index]
+                                          .data()['imageUrl']
+                                          .toString(),
                                       height: 80,
                                       width: MediaQuery.of(context).size.width,
                                       fit: BoxFit.cover,
@@ -88,7 +91,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                   height: 10,
                                 ),
                                 Text(
-                                  snapshot.data.docs[index].data()['description'],
+                                  snapshot.data.docs[index]
+                                      .data()['description'],
                                   style: TextStyle(fontSize: 13),
                                 ),
                                 SizedBox(
