@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:dsc_events_app/notification_message.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 class PushNotificationService {
@@ -10,6 +11,8 @@ class PushNotificationService {
     if (Platform.isIOS) {
       _fcm.requestNotificationPermissions(IosNotificationSettings());
     }
+
+    
 
     // If you want to test the push notification locally,
     // you need to get the token and input to the Firebase console
