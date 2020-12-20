@@ -41,7 +41,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final ref = FirebaseFirestore.instance.collection('events').orderBy('uploadTime', descending: false);
+  final ref = FirebaseFirestore.instance.collection('events').orderBy('priority', descending: false);
 
   @override
   Widget build(BuildContext context) {
